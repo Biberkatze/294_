@@ -1,0 +1,50 @@
+### 
+GET http://localhost:2940/api/v2/entities HTTP/1.1
+Authorization: Bearer MY_ACCESS_TOKEN
+
+
+
+### successful login
+POST http://localhost:2941/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "admin",
+    "password": "admin"
+} 
+
+### register a new user
+POST http://localhost:2941/auth/refresh HTTP/1.1
+content-type: application/json
+
+{
+    "refreshtoken": "MY_REFRESH_TOKEN"
+}
+ 
+
+### failed login
+POST http://localhost:2941/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "admin",
+    "password": "wrongpasswfghfghord"
+}
+
+### failed login (empty credentials
+POST http://localhost:2941/auth/login HTTP/1.1
+content-type: application/json 
+
+{
+    "username": "admin",
+    "password": "ddddddd"
+}
+
+### register a new user
+POST http://localhost:2941/auth/register HTTP/1.1
+content-type: application/json
+
+{
+    "username": "meierrhans",
+    "password": "123456789"
+}

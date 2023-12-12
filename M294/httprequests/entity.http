@@ -1,0 +1,38 @@
+### 
+GET http://localhost:2940/api/v1/entities HTTP/1.1
+
+### 
+GET http://localhost:2940/api/v1/entities/iBVAzpL5DbYPMKviDu4UHR HTTP/1.1
+
+
+###
+POST http://localhost:2940/api/v1/entities HTTP/1.1 
+Content-Type: application/json
+
+{
+    "name": "Freddy Krueger",
+    "age": 45,
+    "tools": [
+        {
+            "name": "scissors"
+        },
+        {
+            "name": "hat"
+        }
+    ]
+}
+
+###
+Delete http://localhost:2940/api/v1/entities/iBVAzpL5DbYPMKviDu4UHR HTTP/1.1 
+Content-Type: application/json
+
+
+###
+PUT http://localhost:2940/api/v1/entities/iBVAzpL5DbYPMKviDu4UHR HTTP/1.1 
+Content-Type: application/json
+
+{
+    "age": 40
+}
+
+
