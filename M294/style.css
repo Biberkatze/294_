@@ -1,16 +1,49 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+:root{
+    --background: #faeed9;
+    --nav:#025a9e;
+    --navhover:#0265b3;
+    --fontcolor: #383636;
 }
-
-#login-section,
-#home-section,
+body{
+    padding: 0;
+    margin: 0;
+    background: var(--background);
+    color: var(--fontcolor);
+    font-family: "Gill Sans MT";
+}
+.container{
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "head"
+        "nav"
+        "main"
+        "foot";
+}
+header{
+    grid-area: head;
+    font-size: 50px;
+    margin: 16px;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #025a9e;
+    padding-bottom: 0px;
+}
+main{
+    grid-area: main;
+    text-align: justify;
+    font-size: 22px;
+    margin: 50px;
+}
 #recipe-section {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 100px solid #ccc;
 }
 
 button {
@@ -19,8 +52,8 @@ button {
     padding: 10px;
     cursor: pointer;
     border: none;
-    border-radius: 3px;
-    margin-top: 10px;
+    border-radius: 30px;
+    margin-top: 50px;
 }
 
 #recipe-details {
